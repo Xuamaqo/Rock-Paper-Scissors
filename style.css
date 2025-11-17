@@ -4,12 +4,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: rgb(243, 243, 243);
 }
 
 body {
   display: grid;
   place-items: center;
-  place-content: center;
+  min-height: 100vh;
 }
 
 .buttons {
@@ -18,9 +19,33 @@ body {
 }
 
 button {
-  padding: 1em 2em;
+  padding: 1.7em 2em;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 10px;
-  border: 1px solid black;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-color: white;
+  transition: transform 0.1s, box-shadow 0.1s; /* smooth animation */
+}
+button:hover {
+  background-color: rgb(220, 220, 220);
+  transform: translateY(2px); /* slightly down */
+}
+button:active {
+  transform: translateY(4px); /* pressed further */
+  box-shadow: 0 2px #393a3a5e; /* reduce shadow */
+}
+#results {
+  padding-top: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#reset {
+  left: 50%;
+  margin-top: 1rem;
+  transform: translateX(130%);
 }
